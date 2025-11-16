@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="dashboard">
+  <h1 class="welcome">🎉 Bem-vindo, {{ username }}!</h1>
+  <p class="restricted">🔒 Você está na área restrita do sistema</p>
+  <a href="{{ url_for('logout') }}" class="logout-btn">🚪 Sair</a>
+</div>
+{% endblock %}

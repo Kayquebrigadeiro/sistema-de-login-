@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block body %}
+<h2>🔐 Entrar</h2>
+<form method="post">
+  <div class="input-group">
+    <input name="username" placeholder="👤 Usuário" required>
+  </div>
+  <div class="input-group">
+    <input name="password" placeholder="🔒 Senha" type="password" required>
+  </div>
+  <button type="submit">Entrar</button>
+</form>
+<div class="links">
+  <a href="{{ url_for('register') }}">📝 Criar conta</a>
+  <span>|</span>
+  <a href="{{ url_for('recover_request') }}">🔑 Recuperar senha</a>
+</div>
+{% endblock %}

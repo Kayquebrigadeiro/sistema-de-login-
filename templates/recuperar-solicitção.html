@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block body %}
+<h2>🔑 Recuperar Senha</h2>
+<p style="color: #666; margin-bottom: 25px; font-size: 14px;">Digite seu usuário para receber um token de recuperação</p>
+<form method="post">
+  <div class="input-group">
+    <input name="username" placeholder="👤 Seu usuário" required>
+  </div>
+  <button type="submit">Enviar Token</button>
+</form>
+<div class="links">
+  <a href="{{ url_for('login') }}">← Voltar ao login</a>
+</div>
+{% endblock %}

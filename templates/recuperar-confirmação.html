@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block body %}
+<h2>🔐 Nova Senha</h2>
+<p style="color: #666; margin-bottom: 25px; font-size: 14px;">Digite o token recebido e sua nova senha</p>
+<form method="post">
+  <div class="input-group">
+    <input name="username" placeholder="👤 Seu usuário" required>
+  </div>
+  <div class="input-group">
+    <input name="token" placeholder="🏷️ Token recebido" required>
+  </div>
+  <div class="input-group">
+    <input name="newpass" placeholder="🔒 Nova senha (mín. 6 caracteres)" type="password" required>
+  </div>
+  <button type="submit">Alterar Senha</button>
+</form>
+<div class="links">
+  <a href="{{ url_for('login') }}">← Voltar ao login</a>
+</div>
+{% endblock %}
