@@ -117,7 +117,8 @@ def recover_request():
         save_users(USERS_FILE, users)
         # Simulação de envio (no mundo real, enviar por email)
         print(f"[SIMULADO] Token de recuperação para {username}: {token}")
-        flash("Token de recuperação gerado e 'enviado' (veja console).")
+        print(f"[LINK DIRETO] http://127.0.0.1:5000/recover/confirm")
+        flash(f"Token de recuperação: {token} (copie e use na próxima tela)")
         return redirect(url_for("recover_confirm"))
     return render_template("recuperar-solicitção.html")
 

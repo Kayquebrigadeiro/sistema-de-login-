@@ -19,11 +19,13 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+PYTHONPATH
 
 # Virtual Environment
 venv/
 env/
 ENV/
+.venv/
 
 # IDE
 .vscode/
@@ -35,6 +37,19 @@ ENV/
 .DS_Store
 Thumbs.db
 
+# Flask
+instance/
+.webassets-cache
+
+# Environment variables
+.env
+.flaskenv
+
 # Application specific
 user.json
 *.log
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
