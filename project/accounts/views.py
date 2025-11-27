@@ -12,9 +12,6 @@ def register(request):
         if form.is_valid():
             user = form.save()
             messages.success(request, 'Cadastro realizado com sucesso! Faça login para continuar.')
-            # Opcional: login automático após cadastro:
-            # login(request, user)
-            # return redirect('accounts:dashboard')
             return redirect('accounts:login')
         else:
             messages.error(request, 'Verifique os dados informados.')
@@ -24,7 +21,7 @@ def register(request):
 
 class DashboardView(LoginRequiredMixin, TemplateView):
     template_name = 'accounts/dashboard.html'
-    login_url = 'accounts:login'  # opcional se já configurado em settings
+    login_url = 'accounts:login'
 
 @login_required
 def profile(request):
